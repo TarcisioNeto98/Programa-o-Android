@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">pagina_web</string>
+    <string name="web_button">acessar web</string>
+</resources>
