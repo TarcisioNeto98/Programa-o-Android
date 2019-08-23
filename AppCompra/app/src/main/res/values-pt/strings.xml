@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppCompra</string>
+    <string name="juice">Suco</string>
+    <string name="pizza">Pizza</string>
+    <string name="cake">Bolo</string>
+    <string name="amount">Quantidade</string>
+    <string name="add">Somar</string>
+</resources>

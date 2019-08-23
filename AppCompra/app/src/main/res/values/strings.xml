@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppCompra</string>
+    <string name="juice">Juice</string>
+    <string name="pizza">Pizza</string>
+    <string name="cake">Cake</string>
+    <string name="amount">Amount</string>
+    <string name="add">Add</string>
+</resources>
