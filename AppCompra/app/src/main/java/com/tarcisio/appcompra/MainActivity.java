@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     Button botaoMostrar;
     CheckBox opcao1, opcao2, opcao3;
     EditText texto1, texto2, texto3;
-    String texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,24 +38,47 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Toast toast;
-                if(!isNumeric(texto1.getText().toString()) || !isNumeric(texto2.getText().toString()) || !isNumeric(texto3.getText().toString())){
-                    toast = Toast.makeText(MainActivity.this, "Erro"+ "\n"+ "digite um valor numerico.", Toast.LENGTH_SHORT);
-                    //toast.setText("Erro"); Muda o conteudo Toast, mas somente se o makeText tiver sido invocado.
+                double total = 0;
+                int cont = 0, contErro = 0;
+                if(opcao1.isChecked()){
+                    if(isNumeric(texto1.getText().toString())) total = converteDouble(opcao1.getText().toString().replace(" R$", "")) * converteDouble(texto1.getText().toString());
+                    else if(!texto1.getText().toString().equals("")){
+                        toast = Toast.makeText(MainActivity.this, "Erro:\nEscreva um valor numerico", Toast.LENGTH_SHORT);
+                        toast.show();
+                        contErro++;
+                    }
+                    else total = converteDouble(opcao1.getText().toString().replace(" R$", ""));
+                    cont++;
+                }
+                if(opcao2.isChecked()){
+                    if(contErro == 0){
+                        if(isNumeric(texto2.getText().toString())) total += converteDouble(opcao2.getText().toString().replace(" R$", "")) * converteDouble(texto2.getText().toString());
+                        else if(!texto2.getText().toString().equals("")){
+                            toast = Toast.makeText(MainActivity.this, "Erro:\n1Escreva um valor numerico", Toast.LENGTH_SHORT);
+                            toast.show();
+                            contErro++;
+                        }
+                        else if(texto2.getText().toString().equals("")) total += converteDouble(opcao2.getText().toString().replace(" R$", ""));
+                    }
+                    cont++;
+                }
+                if(opcao3.isChecked()){
+                    if(contErro == 0){
+                        if(isNumeric(texto3.getText().toString())) total += converteDouble(opcao3.getText().toString().replace(" R$", "")) * converteDouble(texto3.getText().toString());
+                        else if(!texto3.getText().toString().equals("") && contErro == 0){
+                            toast = Toast.makeText(MainActivity.this, "Erro:\nEscreva um valor numerico", Toast.LENGTH_SHORT);
+                            toast.show();
+                            contErro++;
+                        }
+                        else if(texto2.getText().toString().equals("")) total += converteDouble(opcao3.getText().toString().replace(" R$", ""));
+                    }
+                    cont++;
+                }
+                if(cont == 0){
+                    toast = Toast.makeText(MainActivity.this, "Marque algo", Toast.LENGTH_SHORT);
                     toast.show();
                 }
-                else{
-                    double total = 0;
-                    if(opcao1.isChecked()){
-                        texto = opcao1.getText().toString();
-                        total = converteDouble(texto.replace(" R$", "")) * converteDouble(texto1.getText().toString());
-                    }
-                    if(opcao2.isChecked()){
-                        total += converteDouble(opcao2.getText().toString().replace(" R$", "")) * converteDouble(texto2.getText().toString());
-                    }
-                    if(opcao3.isChecked()) total += converteDouble(opcao3.getText().toString().replace(" R$", "")) * converteDouble(texto3.getText().toString());
-                    toast = Toast.makeText(getApplicationContext(), "Total: " + total, Toast.LENGTH_LONG);
-                    toast.show();
-                }
+                if(cont != 0 && contErro == 0) Toast.makeText(getApplicationContext(), "Total: " + total, Toast.LENGTH_SHORT).show();
             }
         });
         /*Button b = new Button(getApplicationContext());
@@ -77,6 +99,4 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
-
-
 }
