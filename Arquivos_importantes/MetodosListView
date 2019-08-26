@@ -1,0 +1,38 @@
+Construtores públicos
+ListView(Context context)
+ListView(Context context, AttributeSet attrs)
+ListView(Context context, AttributeSet attrs, int defStyleAttr)
+ListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes)
+
+Métodos públicos
+void	addFooterView(View v, Object data, boolean isSelectable)
+Adicione uma vista fixa para aparecer na parte inferior da lista.
+
+void	addFooterView(View v)
+Adicione uma vista fixa para aparecer na parte inferior da lista.
+
+void	addHeaderView(View v, Object data, boolean isSelectable)
+Adicione uma vista fixa para aparecer no topo da lista.
+
+void	addHeaderView(View v)
+Adicione uma vista fixa para aparecer no topo da lista.
+
+CharSequence	getAccessibilityClassName()
+Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
+
+ListAdapter	getAdapter()
+Retorna o adaptador atualmente em uso neste ListView.
+
+boolean	removeFooterView(View v)
+Remove uma vista de rodapé adicionada anteriormente.
+
+boolean	removeHeaderView(View v)
+Remove uma visualização de cabeçalho adicionada anteriormente.
+
+void	setAdapter(ListAdapter adapter)
+Define os dados por trás deste ListView.
+
+void	setDividerHeight(int height)
+Define a altura do divisor que será desenhado entre cada item na lista.
+
+

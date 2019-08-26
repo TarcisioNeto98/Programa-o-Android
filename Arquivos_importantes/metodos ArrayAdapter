@@ -1,0 +1,56 @@
+Construtores públicos
+ArrayAdapter(Context context, int resource)
+Construtor
+
+ArrayAdapter(Context context, int resource, int textViewResourceId)
+Construtor
+
+ArrayAdapter(Context context, int resource, T[] objects)
+Construtor.
+
+ArrayAdapter(Context context, int resource, int textViewResourceId, T[] objects)
+Construtor.
+
+ArrayAdapter(Context context, int resource, List<T> objects)
+Construtor
+
+ArrayAdapter(Context context, int resource, int textViewResourceId, List<T> objects)//Passa o contexto, o id do layout(Arquivo xml), um id de uma visão, no caso TextView, pois são visões que estarão em cada item da lista, lista de objetos(Informações que ficarão em cada item da lista).
+
+Construtor
+
+Métodos públicos
+void	add(T object)
+Adiciona o objeto especificado no final da matriz.
+
+void	addAll(T... items)
+Adiciona os itens especificados no final da matriz.
+
+void	addAll(Collection<? extends T> collection)
+Adiciona a coleção especificada no final da matriz.
+
+void	clear()
+Remova todos os elementos da lista.
+
+Context	getContext()
+Retorna o contexto associado a esse adaptador de matriz.
+
+int	getCount()
+Quantos itens estão no conjunto de dados representado por este adaptador.
+
+T	getItem(int position)
+Obter o item de dados associado à posição especificada no conjunto de dados.
+
+long	getItemId(int position)
+Obtenha o ID da linha associado à posição especificada na lista.
+
+int	getPosition(T item)
+Retorna a posição do item especificado na matriz.
+
+void	insert(T object, int index)
+Insere o objeto especificado no índice especificado na matriz.
+
+void	notifyDataSetChanged()
+Notifica os observadores em anexo de que os dados subjacentes foram alterados e qualquer visualização que reflita o conjunto de dados deve ser atualizada automaticamente.
+
+void	remove(T object)
+Remove o objeto especificado da matriz.

@@ -1,0 +1,283 @@
+Classe Uri
+
+parse(String uriString)
+Cria um Uri que analisa a string URI codificada fornecida. (Metodo publico da classe Uri).
+
+toString()
+Retorna a representação de string codificada deste URI.
+
+isHierarchical()
+Retorna true se esse URI for hierárquico, como "http://google.com".
+
+Classe Intent
+Construtores públicos
+
+Intent()
+Crie uma intenção vazia.
+
+Intent(Intent o)
+Construtor de cópia.
+
+Intent(String action)
+Crie uma intenção com uma determinada ação.
+
+Intent(String action, Uri uri)
+Crie uma intenção com uma determinada ação e para um determinado URL de dados.
+
+Intent(Context packageContext, Class<?> cls)
+Crie uma intenção para um componente específico.
+
+Intent(String action, Uri uri, Context packageContext, Class<?> cls)
+Crie uma intenção para um componente específico com uma ação e dados especificados.
+
+Metodos publicos, mas não estaticos.
+
+setClass(Context, name.class)
+
+getExtras()
+Recupera um mapa de dados estendidos da intenção.
+
+getFlags()
+Recupere qualquer sinalizador especial associado a essa intenção.
+
+hasExtra(String name)
+Retorna true se um valor extra estiver associado ao nome fornecido.
+
+putExtra(String name, String value)
+Adicione dados estendidos à intenção.
+
+removeExtra(String name)
+Remova os dados estendidos da intenção.
+
+replaceExtras(Intent src)
+Completamente substitua os extras na intenção com os extras na intenção dada.
+
+setAction(String action)
+Definir a ação geral a ser executada.
+
+setComponent(ComponentName component)
+(Geralmente opcional) Defina explicitamente o componente para lidar com a intenção.
+
+setData(Uri data)
+Defina os dados em que esta intenção está operando
+
+toString()
+Retorna uma representação de string do objeto.
+
+Classe CkeckBox
+
+Metodos
+
+toggle()
+Alterar o estado verificado da vista para o inverso do seu estado atual
+
+setChecked(boolean checked)
+Altera o estado verificado deste botão.
+
+isChecked()
+
+Classe Botão
+
+append(CharSequence text)
+Método de conveniência para anexar o texto especificado ao buffer de exibição do TextView, atualizando-o para TextView.BufferType.EDITABLE se ele já não fosse editável.
+
+getLineCount()
+Retorna o número de linhas de texto ou 0 se o layout interno não foi criado.
+
+getLetterSpacing()
+Obtém o valor de espaço da letra do texto, que determina o espaçamento entre os caracteres.
+
+getText()
+Retorna o texto que o TextView está exibindo.
+
+getTextSize()
+Retorna o tamanho do texto.
+
+onLayout(boolean changed, int left, int top, int right, int bottom)
+Chamado do layout quando essa visualização deve atribuir um tamanho e uma posição a cada um de seus filhos.
+
+setCursorVisible(boolean visible)
+Defina se o cursor está visível.
+
+setEnabled(boolean enabled)
+Defina o estado ativado desta visualização.
+
+setHeight(int pixels)
+Define a altura do TextView para ser exatamente pixelsalta.
+
+setLetterSpacing(float letterSpacing)
+Define o espaçamento entre letras de texto nas unidades em.
+
+void	setLineHeight(int lineHeight)
+Define uma altura de linha explícita para este TextView.
+
+void	setLineSpacing(float add, float mult)
+Define o espaçamento entre linhas para este TextView.
+
+void	setLines(int lines)
+Define a altura do TextView para ser exatamente linesalta.
+
+final void	setLinkTextColor(int color)
+Define a cor dos links no texto.
+
+setSelected(boolean selected)
+Altera o estado de seleção desta exibição.
+
+	setMaxEms(int maxEms)
+Define a largura do TextView para ser no máximo maxEmsamplo.
+
+void	setMaxHeight(int maxPixels)
+Define a altura do TextView para ser no máximo maxPixelsalto.
+
+void	setMaxLines(int maxLines)
+Define a altura do TextView para ser no máximo maxLinesalto.
+
+void	setMaxWidth(int maxPixels)
+Define a largura do TextView para ser no máximo maxPixelsamplo.
+
+void	setMinEms(int minEms)
+Define a largura do TextView para ser pelo menos minEmsampla.
+
+void	setMinHeight(int minPixels)
+Define a altura do TextView para ser pelo menos minPixelsalto.
+
+void	setMinLines(int minLines)
+Define a altura do TextView para ser pelo menos minLinesalto.
+
+void	setMinWidth(int minPixels)
+Define a largura do TextView para ser pelo menos minPixelsampla.
+
+setPadding(int left, int top, int right, int bottom)
+Define o preenchimento.
+
+setTextColor(int color)
+Define a cor do texto para todos os estados (normal, selecionado, focalizado) como esta cor.
+
+setTextColor(ColorStateList colors)
+Define a cor do texto.
+
+setWidth(int pixels)
+Define a largura do TextView para ser exatamente pixelsgrande.
+
+setAllCaps(boolean allCaps)
+Define as propriedades desse campo para transformar a entrada na exibição ALL CAPS.
+
+public Button ( Contexto de contexto)
+Construtor simples para usar ao criar um botão do código.
+
+classe ToogleButton
+
+CharSequence	getAccessibilityClassName()
+Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
+
+float	getDisabledAlpha()
+Retorna o valor alfa do botão quando está desabilitado
+
+CharSequence	getTextOff()
+Retorna o texto para quando o botão não está no estado marcado.
+
+CharSequence	getTextOn()
+Retorna o texto para quando o botão está no estado marcado.
+
+setChecked(boolean checked)
+Altera o estado verificado deste botão.
+
+void	setTextOff(CharSequence textOff)
+Define o texto para quando o botão não está no estado marcado.
+
+void	setTextOn(CharSequence textOn)
+Define o texto para quando o botão está no estado marcado.
+
+boolean	isAllCaps() tambem tem no button//A partir desse são metodos herdados tambem tem no TextView e no Button.
+Verifica se o método de transformação aplicado a este TextView está definido como ALL CAPS.
+
+
+int length()
+retorna o tamanho em caracteres.
+
+float	getTextSize()
+
+int	getTotalPaddingBottom()
+Retorna o preenchimento total inferior da visualização, incluindo o Drawable inferior, se houver, o espaço extra para manter mais de maxLines de exibição e o deslocamento vertical para gravidade, se houver.
+
+int	getTotalPaddingEnd()
+Retorna o preenchimento final total da visualização, incluindo o final Drawable, se houver.
+
+int	getTotalPaddingLeft()
+Retorna o preenchimento total esquerdo da visualização, incluindo o Drawable da esquerda, se houver.
+
+int	getTotalPaddingRight()
+Retorna o preenchimento total direito da visualização, incluindo o Drawable certo, se houver.
+
+int	getTotalPaddingStart()
+Retorna o total de preenchimento inicial da visualização, incluindo o início Drawable, se houver.
+
+int	getTotalPaddingTop()
+Retorna o total de preenchimento superior da visualização, incluindo o superior Drawable, se houver, o espaço extra para manter mais de maxLines de exibição e o deslocamento vertical para gravidade, se houver.
+
+Classe Toast(Exibe uma mensagem fluante na tela, que não pode ser focada pelo usuário).
+
+Constantes
+
+int	LENGTH_LONG
+Mostrar a visualização ou notificação de texto por um longo período de tempo.
+
+int	LENGTH_SHORT
+Mostrar a visualização ou notificação de texto por um curto período de tempo.
+
+Construtor
+
+Toast(Context context)
+Construa um objeto Toast vazio.
+
+Metodos Publicos
+
+void	cancel()
+Feche a visualização se ela estiver sendo exibida ou não a mostre se ela ainda não estiver sendo exibida.
+
+int	getDuration()
+Retornar a duração.
+
+int	getGravity()
+Obtenha o local em que a notificação deve aparecer na tela.
+
+void	show()
+Mostrar a exibição pela duração especificada.
+
+View	getView()
+Retorna a visão.
+
+static Toast	makeText(Context context, int resId, int duration)
+Faça um brinde padrão que contenha apenas uma exibição de texto com o texto de um recurso.
+
+static Toast	makeText(Context context, CharSequence text, int duration)
+Faça um brinde padrão que contenha apenas uma exibição de texto.
+
+void	setDuration(int duration)
+Definir por quanto tempo mostrar a exibição.
+
+void	setGravity(int gravity, int xOffset, int yOffset)
+Defina o local em que a notificação deve aparecer na tela.
+
+void	setMargin(float horizontalMargin, float verticalMargin)
+Definir as margens da visão.
+
+void	setText(int resId)
+Atualize o texto em um Toast que foi criado anteriormente usando um dos métodos makeText ().
+
+void	setText(CharSequence s)
+Atualize o texto em um Toast que foi criado anteriormente usando um dos métodos 
+
+void	setView(View view)
+Definir a exibição para mostrar.
+
+Metodos Herdados do java.lang.Object
+
+public int getXOffset ()
+Retorna o deslocamento X em pixels para aplicar à localização da gravidade.
+
+Object	clone()
+Cria e retorna uma cópia deste objeto.
+
+Parâmetros
+context	Context: O Contexto em que o Botão está sendo executado, através do qual ele pode acessar o tema atual, recursos, etc.
