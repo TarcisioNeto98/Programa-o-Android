@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ListaAPP</string>
+    <string-array name="familia">
+        <item>Tarcisio</item>
+        <item>Vinicius</item>
+        <item>Pai</item>
+        <item>Mãe</item>
+    </string-array>
+</resources>
