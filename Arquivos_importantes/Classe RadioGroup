@@ -1,0 +1,22 @@
+Classes Aninhadas
+
+interface	RadioGroup.OnCheckedChangeListener
+Definição de interface para um retorno de chamada a ser chamado quando o botão de opção marcado for alterado nesse grupo.
+
+void	check(int id)
+Define a seleção para o botão de rádio cujo identificador é passado no parâmetro.
+
+void	clearCheck()
+Apaga a seleção.
+
+CharSequence	getAccessibilityClassName()
+Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
+
+int	getCheckedRadioButtonId()
+Retorna o identificador do botão de opção selecionado nesse grupo.
+
+void	setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener listener)
+Registre um retorno de chamada para ser chamado quando o botão de opção marcado mudar nesse grupo.
+
+void	setOnHierarchyChangeListener(ViewGroup.OnHierarchyChangeListener listener)
+Registre um retorno de chamada para ser chamado quando um filho for adicionado ou removido dessa exibição.

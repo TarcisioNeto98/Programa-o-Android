@@ -1,0 +1,7 @@
+Métodos públicos
+CharSequence	getAccessibilityClassName()
+Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
+
+void	toggle()
+Alterar o estado verificado da vista para o inverso do seu estado atual
+Se o botão de opção já estiver marcado, esse método não alternará o botão de opção.

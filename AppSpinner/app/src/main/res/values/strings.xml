@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppSpinner</string>
+    <string-array name="nomes">
+        <item>Tarcisio</item>
+        <item>Neto</item>
+        <item>Saint</item>
+        <item>Seiya</item>
+    </string-array>
+</resources>

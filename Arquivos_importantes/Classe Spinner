@@ -1,0 +1,9 @@
+Métodos públicos
+CharSequence	getAccessibilityClassName()
+Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
+
+void	setEnabled(boolean enabled)
+Defina o estado ativado desta visualização.
+
+boolean	onTouchEvent(MotionEvent event)
+Implemente esse método para lidar com eventos de movimento da tela sensível ao toque.
