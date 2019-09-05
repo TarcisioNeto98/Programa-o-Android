@@ -12,7 +12,7 @@ Apaga a seleção.
 CharSequence	getAccessibilityClassName()
 Retorna o nome da classe deste objeto a ser usado para fins de acessibilidade.
 
-int	getCheckedRadioButtonId()
+int	getCheckedRadioButtonId()//Retorna o identificador na Classe R, o mesmo que é usado no metodo findViewById(), retorna -1, se nenhum botão tiver sido selecionado.
 Retorna o identificador do botão de opção selecionado nesse grupo.
 
 void	setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener listener)
@@ -20,3 +20,31 @@ Registre um retorno de chamada para ser chamado quando o botão de opção marca
 
 void	setOnHierarchyChangeListener(ViewGroup.OnHierarchyChangeListener listener)
 Registre um retorno de chamada para ser chamado quando um filho for adicionado ou removido dessa exibição.
+
+Métodos herdados
+
+View	getChildAt(int index)//Retorna o radiobutton do groupbutton, passando o id(de 0 até n-1, sendo n o número de filhos, como um vetor).
+Retorna a visualização na posição especificada no grupo.
+
+int	getChildCount()//Retorna a quantidade de radioButton de radiogroup.
+Retorna o número de filhos no grupo.
+
+boolean	hasFocus()
+Retorna true se essa visualização tiver ou contiver foco
+
+int	indexOfChild(View child)//Passando radiobutton
+Retorna a posição no grupo da exibição filho especificada.
+
+void	removeViews(int start, int count)//As posições são iguais a vetores, posso tirar de 0 a 1, ou 2 a 5.
+Remove o intervalo especificado de visualizações do grupo.
+
+boolean	hasOnClickListeners()
+Retorne se esta visualização possui um OnClickListener anexado.
+
+boolean	isClickable()//Acho que funciona em outras visualizações como um texview ou button, pois é herdado.
+Indica se essa visualização reage a eventos de clique ou não.
+
+boolean	isLongClickable()//Acho que funciona em outras visualizações como um texview ou button, pois é herdado.
+Indica se essa exibição reage a eventos de clique longo ou não.
+
+
