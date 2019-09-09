@@ -22,7 +22,14 @@ public class MostrarSalarioActivity extends AppCompatActivity {
         String porcentagem = i.getStringExtra("botaoSelecionado");//Uma outra opção(Ao invés do primeiro), o método getStringExtra retorna minha string do meu pacote
         //extra, passando o nome do pacote.
 
-        Toast.makeText(this, salario + " " + porcentagem, Toast.LENGTH_SHORT).show();
+        porcentagem = porcentagem.replace("%", "");
 
+        double acrescimo = Double.parseDouble(porcentagem)/100.0, salario_modificado;
+
+        salario_modificado = Double.parseDouble(salario);
+
+        salario_modificado += (salario_modificado*acrescimo);
+
+        Toast.makeText(this, salario_modificado + "", Toast.LENGTH_SHORT).show();
     }
 }

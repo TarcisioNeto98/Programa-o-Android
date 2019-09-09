@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView salario, botao, texto;
     RadioGroup colecao;
+    RadioButton selecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +62,10 @@ public class MainActivity extends AppCompatActivity {
                     i.setClass(getApplicationContext(), MostrarSalarioActivity.class);//Método que substitui um construtor onde passo a activity atual
                     //e a activity que desejo ir, nele passo a activity atual e a activity para onde desejo ir.
                     i.setAction(Intent.ACTION_SEND);
-                    i.putExtra("botaoSelecionado", colecao.getCheckedRadioButtonId()+"");
+                    selecionado = findViewById(colecao.getCheckedRadioButtonId());
+                    i.putExtra("botaoSelecionado", selecionado.getText().toString());
                     i.putExtra("salario", salario.getText().toString());//somente o getText não funciona pois retorna uma charsequence, logo tem que ser
-                    //Convertida para uma string, pois o metodo putExtra só recebe string.
+                    //Convertida para uma string, pois esse metodo putExtra(tem outros) só recebe string.
                     startActivity(i);//Método que inicia uma intent.
                 }
             }
