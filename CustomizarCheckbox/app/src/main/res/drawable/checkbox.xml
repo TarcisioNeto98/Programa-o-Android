@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Layout feito para substituir o checkbox comum do android-->
+    <!--Os dois item são utilizados para mudar a aparência do botão-->
+    <!--a medida que ele é clicado ou não, quando ele é clicado eu acesso a pasta drawable
+    pego a imagem que foi convertida para o xml, eu devo especificar o caminho, com o atributo
+    android:drawable, eu digo a pasta onde os xml dos botoes estão, e em seguida o nome
+    do arquivo xml.-->
+    <item android:state_checked="true" android:drawable="@drawable/ic_checado_24px" />
+    <item android:state_checked="false" android:drawable="@drawable/ic_nao_checado_24px" />
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Utilizados para fornecer a cor da aplicação, são o colorPrimary(é a cor predominante no sistema) e o colorAccent(Cor secundaria, é a cor que é visualizada com
+menos intencidade)-->
+<!--Basta mudar as cores nas tags e aplicação mudará de cor.-->
+
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+</resources>
