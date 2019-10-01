@@ -14,4 +14,28 @@ public class User {
     @ColumnInfo(name = "last_name")
     private String lastName;
 
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
+
 }
