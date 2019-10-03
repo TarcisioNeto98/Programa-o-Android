@@ -20,7 +20,6 @@ public interface UserDAO {
     @Query("SELECT * FROM Usuario WHERE Usuario.first_name LIKE :firstName AND Usuario.last_name LIKE :lastName")
     public User usuarioPorNome(String firstName, String lastName);//A busca é feita internamente, somente com os nomes e os comandos SQL, a biblioteca ROOM
                                                                   //já retorna um objeto já armaezando anteriormante, que atenda a busca com o SQL.
-
     @Query("SELECT * FROM Usuario WHERE Usuario.id = :idUser")
     public User usuarioPorId(int idUser);
 
