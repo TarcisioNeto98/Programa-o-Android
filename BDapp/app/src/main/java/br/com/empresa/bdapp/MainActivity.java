@@ -39,6 +39,35 @@ public class MainActivity extends AppCompatActivity{
         buttonDelete = (Button) findViewById(R.id.buttonDelete);
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
 
+        buttonUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText etId = (EditText) findViewById(R.id.etId);
+                if(vazio(firstName.getText().toString(), lastName.getText().toString()) || etId.getText().toString().isEmpty()){
+                    Toast mensagem;
+                    mensagem = Toast.makeText(getApplicationContext(), "Preencha os campos", Toast.LENGTH_SHORT);
+                    mensagem.show();
+                }
+
+                else{
+                    int id =  Integer.parseInt(etId.getText().toString());
+                    User user = users.usuarioPorId(id);
+                    if(user != null){
+                        Toast.makeText(getApplicationContext(), user.getFirstName(), Toast.LENGTH_SHORT).show();
+                        user.setFirstName(firstName.getText().toString());
+                        user.setLastName(lastName.getText().toString());
+                        users.updateUser(user);
+                        for(int i = 1; i < 11; i++){
+                            user = users.usuarioPorId(i);
+                            if(user != null) Toast.makeText(MainActivity.this, user.getId() + " " + user.getFirstName() + " " + user.getLastName(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else Toast.makeText(getApplicationContext(), "user não encontrado", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,17 +93,26 @@ public class MainActivity extends AppCompatActivity{
                     mensagem = Toast.makeText(getApplicationContext(), "Preencha os campos", Toast.LENGTH_SHORT);
                     mensagem.show();
                 }
+                else{
+                    User user = users.usuarioPorNome(firstName.getText().toString(), lastName.getText().toString());
 
+                    if(user != null) {
+                        users.deleteUser(user);
+
+                        for (int i = 1; i < 11; i++) {
+                            user = users.usuarioPorId(i);
+                            if (user != null)
+                                Toast.makeText(MainActivity.this, user.getId() + " " + user.getFirstName() + " " + user.getLastName(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    else Toast.makeText(getApplicationContext(), "user não encontrado", Toast.LENGTH_SHORT).show();
+                }
                 /*else{
                     User user = users.usuarioPorNome(firstName.getText().toString(), lastName.getText().toString());
                     Toast.makeText(getApplicationContext(), user.getId()+"", Toast.LENGTH_SHORT).show();
-                    users.deleteUser(user);//df neto
+                    users.deleteUser(user);//df neto/ fg as
                 }*/
-
-                for(int i = 1; i < 11; i++){
-                    User user = users.usuarioPorId(i);
-                    Toast.makeText(MainActivity.this, user.getId() + " " + user.getFirstName() + " " + user.getLastName(), Toast.LENGTH_SHORT).show();
-                }
 
             }
         });
